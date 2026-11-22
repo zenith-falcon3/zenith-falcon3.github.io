@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料瓜瓜网站不打烊 - 官方视频社区 | 原创 · 高清 · 持续更新</title>
+<meta name="description" content="黑料瓜瓜网站不打烊官方网站，专注真实影像与社区共创的视频品牌平台，汇聚原创创作者、深度故事与持续更新的精品内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141b2c'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23ffc94d' stroke-width='4'/%3E%3Cpath d='M27 23l16 9-16 9z' fill='%23ffc94d'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --gg-bg:#0f1420;
+    --gg-bg-soft:#161d2e;
+    --gg-panel:#1b2336;
+    --gg-panel-2:#212b42;
+    --gg-line:#2c3852;
+    --gg-text:#e8edf7;
+    --gg-muted:#9aa8c4;
+    --gg-gold:#ffc94d;
+    --gg-mint:#4be1b0;
+    --gg-pink:#ff7a9c;
+    --gg-blue:#69a8ff;
+    --gg-radius:14px;
+    --gg-head-h:56px;
+    --gg-ann-h:44px;
+    --gg-offset:104px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--gg-bg);
+    color:var(--gg-text);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  h1,h2,h3,h4{margin:0;line-height:1.35;}
+  p{margin:0;}
+  ul{margin:0;padding:0;list-style:none;}
+  .gg-wrap{width:min(1180px,92vw);margin:0 auto;}
+  .gg-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+  /* ============ 吸顶公告 + 页头 ============ */
+  .gg-sticky-top{
+    position:sticky;top:0;z-index:120;
+  }
+  .gg-announce{
+    height:var(--gg-ann-h);
+    background:linear-gradient(90deg,#ffc94d,#ff9d5c 55%,#ff7a9c);
+    color:#20180a;
+    font-size:13.5px;
+    display:flex;align-items:center;
+    overflow:hidden;
+  }
+  .gg-announce-inner{
+    width:min(1180px,92vw);margin:0 auto;
+    display:flex;align-items:center;gap:10px;
+  }
+  .gg-announce-badge{
+    flex:none;background:#20180a;color:#ffd873;
+    font-size:11.5px;font-weight:700;letter-spacing:.5px;
+    padding:2px 9px;border-radius:999px;
+  }
+  .gg-announce-track{
+    flex:1;min-width:0;overflow:hidden;white-space:nowrap;
+    text-overflow:ellipsis;
+    font-weight:600;
+  }
+  .gg-announce-link{
+    flex:none;font-size:12.5px;font-weight:700;
+    border-bottom:1.5px solid rgba(32,24,10,.5);
+  }
+  .gg-header{
+    height:var(--gg-head-h);
+    background:rgba(15,20,32,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--gg-line);
+  }
+  .gg-header-inner{
+    width:min(1180px,92vw);margin:0 auto;height:100%;
+    display:flex;align-items:center;gap:20px;
+  }
+  .gg-logo{display:flex;align-items:center;gap:10px;flex:none;}
+  .gg-logo-mark{
+    width:34px;height:34px;border-radius:10px;flex:none;
+    background:radial-gradient(circle at 30% 25%,#ffd873,#ff9d5c 60%,#ff7a9c);
+    display:grid;place-items:center;color:#20180a;font-weight:900;font-size:15px;
+  }
+  .gg-logo-text{font-weight:800;font-size:16px;letter-spacing:.3px;white-space:nowrap;}
+  .gg-nav{display:flex;align-items:center;gap:2px;margin-left:8px;flex:1;min-width:0;}
+  .gg-nav a{
+    font-size:13.5px;color:var(--gg-muted);padding:7px 10px;border-radius:8px;
+    white-space:nowrap;transition:.18s;
+  }
+  .gg-nav a:hover{color:var(--gg-gold);background:rgba(255,201,77,.09);}
+  .gg-head-tools{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none;}
+  .gg-search{position:relative;display:flex;align-items:center;}
+  .gg-search input{
+    width:190px;height:34px;border-radius:999px;
+    border:1px solid var(--gg-line);background:var(--gg-bg-soft);
+    color:var(--gg-text);padding:0 36px 0 14px;font-size:13px;outline:none;transition:.2s;
+  }
+  .gg-search input:focus{border-color:var(--gg-gold);width:220px;}
+  .gg-search button{
+    position:absolute;right:4px;top:4px;width:26px;height:26px;border:0;border-radius:50%;
+    background:var(--gg-gold);color:#20180a;font-size:13px;display:grid;place-items:center;font-weight:800;
+  }
+  .gg-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    height:34px;padding:0 16px;border-radius:999px;border:1px solid transparent;
+    font-size:13px;font-weight:700;transition:.2s;white-space:nowrap;
+  }
+  .gg-btn-gold{background:var(--gg-gold);color:#20180a;}
+  .gg-btn-gold:hover{background:#ffd873;transform:translateY(-1px);}
+  .gg-btn-ghost{background:transparent;border-color:var(--gg-line);color:var(--gg-text);}
+  .gg-btn-ghost:hover{border-color:var(--gg-gold);color:var(--gg-gold);}
+  .gg-burger{
+    display:none;width:36px;height:34px;border-radius:9px;border:1px solid var(--gg-line);
+    background:var(--gg-bg-soft);color:var(--gg-text);font-size:16px;
+  }
+  .gg-mobile-nav{
+    display:none;background:var(--gg-panel);border-bottom:1px solid var(--gg-line);
+    padding:10px 0 16px;
+  }
+  .gg-mobile-nav a{
+    display:block;padding:10px 4px;font-size:14px;color:var(--gg-muted);
+    border-bottom:1px dashed var(--gg-line);
+  }
+  .gg-mobile-nav a:last-child{border-bottom:0;}
+  .gg-mobile-nav.gg-open{display:block;}
+
+  /* ============ 首屏 ============ */
+  .gg-hero{
+    padding:44px 0 56px;
+    background:
+      radial-gradient(900px 380px at 82% -6%,rgba(255,201,77,.14),transparent 62%),
+      radial-gradient(700px 320px at 8% 108%,rgba(105,168,255,.13),transparent 60%),
+      var(--gg-bg);
+    border-bottom:1px solid var(--gg-line);
+    scroll-margin-top:var(--gg-offset);
+  }
+  .gg-hero-grid{
+    display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr);
+    gap:44px;align-items:center;
+  }
+  .gg-hero-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:700;letter-spacing:.6px;color:var(--gg-gold);
+    background:rgba(255,201,77,.1);border:1px solid rgba(255,201,77,.32);
+    padding:5px 13px;border-radius:999px;margin-bottom:18px;
+  }
+  .gg-hero-tag i{width:6px;height:6px;border-radius:50%;background:var(--gg-gold);display:inline-block;}
+  .gg-hero h1{
+    font-size:clamp(30px,4.4vw,50px);
+    font-weight:900;letter-spacing:-.5px;line-height:1.18;margin-bottom:8px;
+  }
+  .gg-hero h1 em{
+    font-style:normal;
+    background:linear-gradient(100deg,#ffc94d,#ff7a9c 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .gg-hero-sub{font-size:15px;color:var(--gg-muted);margin-bottom:18px;font-weight:600;letter-spacing:.2px;}
+  .gg-hero-intro{
+    font-size:14.5px;color:#c3cde2;line-height:1.85;margin-bottom:22px;
+  }
+  .gg-hero-intro b{color:var(--gg-gold);font-weight:700;}
+  .gg-hero-stats{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:26px;
+  }
+  .gg-stat{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:12px;
+    padding:12px 12px 11px;
+  }
+  .gg-stat strong{display:block;font-size:20px;font-weight:900;color:var(--gg-gold);letter-spacing:.3px;}
+  .gg-stat span{font-size:11.5px;color:var(--gg-muted);}
+  .gg-hero-actions{display:flex;flex-wrap:wrap;gap:10px;}
+  .gg-hero-actions .gg-btn{height:42px;padding:0 22px;font-size:14px;}
+  .gg-hero-visual{
+    position:relative;border-radius:20px;overflow:hidden;
+    border:1px solid var(--gg-line);
+    box-shadow:0 26px 60px -30px rgba(0,0,0,.85);
+  }
+  .gg-hero-visual img{width:100%;aspect-ratio:16/12;object-fit:cover;}
+  .gg-hero-badge{
+    position:absolute;left:14px;bottom:14px;
+    display:flex;align-items:center;gap:9px;
+    background:rgba(15,20,32,.82);backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:7px 13px;
+    font-size:12px;color:#dfe6f5;
+  }
+  .gg-hero-badge b{color:var(--gg-mint);}
+  .gg-hero-badge .gg-live-dot{width:7px;height:7px;border-radius:50%;background:var(--gg-pink);box-shadow:0 0 0 3px rgba(255,122,156,.25);}
+
+  /* ============ 通用 section ============ */
+  .gg-section{padding:56px 0;border-bottom:1px solid var(--gg-line);scroll-margin-top:var(--gg-offset);}
+  .gg-section:nth-of-type(even){background:rgba(27,35,54,.28);}
+  .gg-sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px;margin-bottom:26px;}
+  .gg-sec-head h2{
+    font-size:clamp(21px,2.6vw,28px);font-weight:900;letter-spacing:-.3px;
+  }
+  .gg-sec-head h2 span{color:var(--gg-gold);}
+  .gg-sec-head p{font-size:13.5px;color:var(--gg-muted);max-width:620px;}
+  .gg-sec-kicker{
+    display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:1.4px;
+    color:var(--gg-mint);text-transform:uppercase;margin-bottom:6px;
+  }
+  .gg-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+  .gg-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+  .gg-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+  .gg-card{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:var(--gg-radius);
+    overflow:hidden;transition:.2s;display:flex;flex-direction:column;min-width:0;
+  }
+  .gg-card:hover{transform:translateY(-3px);border-color:#3b4a68;box-shadow:0 18px 34px -22px rgba(0,0,0,.9);}
+  .gg-card-body{padding:15px 16px 17px;display:flex;flex-direction:column;gap:9px;flex:1;}
+  .gg-card h3{font-size:15.5px;font-weight:800;line-height:1.45;}
+  .gg-card p{font-size:13px;color:var(--gg-muted);line-height:1.75;}
+  .gg-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:11.5px;color:#8494b2;}
+  .gg-chip{
+    display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;
+    background:rgba(105,168,255,.14);color:var(--gg-blue);border:1px solid rgba(105,168,255,.3);
+  }
+  .gg-chip.gg-chip-gold{background:rgba(255,201,77,.13);color:var(--gg-gold);border-color:rgba(255,201,77,.32);}
+  .gg-chip.gg-chip-mint{background:rgba(75,225,176,.12);color:var(--gg-mint);border-color:rgba(75,225,176,.3);}
+  .gg-chip.gg-chip-pink{background:rgba(255,122,156,.12);color:var(--gg-pink);border-color:rgba(255,122,156,.3);}
+  .gg-actions-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:4px;}
+  .gg-mini-btn{
+    display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;
+    background:var(--gg-panel-2);border:1px solid var(--gg-line);color:var(--gg-muted);
+    padding:5px 11px;border-radius:999px;transition:.18s;
+  }
+  .gg-mini-btn:hover{color:var(--gg-text);border-color:#44557a;}
+  .gg-mini-btn.gg-on-gold{color:var(--gg-gold);border-color:rgba(255,201,77,.5);background:rgba(255,201,77,.1);}
+  .gg-mini-btn.gg-on-pink{color:var(--gg-pink);border-color:rgba(255,122,156,.5);background:rgba(255,122,156,.1);}
+
+  /* 焦点区 */
+  .gg-focus{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px;}
+  .gg-focus-main{
+    position:relative;border-radius:var(--gg-radius);overflow:hidden;border:1px solid var(--gg-line);
+    display:flex;flex-direction:column;background:var(--gg-panel);
+  }
+  .gg-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+  .gg-focus-main .gg-card-body{padding:18px 20px 20px;}
+  .gg-focus-main h3{font-size:20px;}
+  .gg-focus-list{display:flex;flex-direction:column;gap:12px;min-width:0;}
+  .gg-focus-item{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:12px;
+    padding:13px 15px;display:flex;gap:12px;align-items:flex-start;transition:.2s;flex:1;
+  }
+  .gg-focus-item:hover{border-color:#3b4a68;background:var(--gg-panel-2);}
+  .gg-focus-num{
+    flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+    font-size:12.5px;font-weight:900;background:rgba(255,201,77,.14);color:var(--gg-gold);
+  }
+  .gg-focus-item h4{font-size:14px;font-weight:800;margin-bottom:4px;line-height:1.45;}
+  .gg-focus-item p{font-size:12.5px;color:var(--gg-muted);line-height:1.65;}
+
+  /* 榜单 */
+  .gg-rank-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+  .gg-rank-tab{
+    font-size:12.5px;font-weight:700;padding:7px 16px;border-radius:999px;
+    background:var(--gg-panel);border:1px solid var(--gg-line);color:var(--gg-muted);transition:.18s;
+  }
+  .gg-rank-tab.gg-active{background:var(--gg-gold);border-color:var(--gg-gold);color:#20180a;}
+  .gg-rank-row{
+    display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;
+    padding:13px 16px;border-bottom:1px solid var(--gg-line);transition:.18s;
+  }
+  .gg-rank-row:hover{background:rgba(33,43,66,.6);}
+  .gg-rank-row:last-child{border-bottom:0;}
+  .gg-rank-no{font-size:17px;font-weight:900;color:var(--gg-muted);text-align:center;}
+  .gg-rank-row:nth-child(1) .gg-rank-no{color:var(--gg-gold);}
+  .gg-rank-row:nth-child(2) .gg-rank-no{color:#dfe6f5;}
+  .gg-rank-row:nth-child(3) .gg-rank-no{color:#e0a06a;}
+  .gg-rank-title{font-size:14px;font-weight:700;line-height:1.5;}
+  .gg-rank-sub{font-size:12px;color:var(--gg-muted);margin-top:2px;}
+  .gg-rank-val{font-size:12.5px;font-weight:800;color:var(--gg-mint);white-space:nowrap;}
+  .gg-rank-panel{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:var(--gg-radius);overflow:hidden;
+  }
+
+  /* 视频列表（文字为主） */
+  .gg-video-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--gg-line);border-radius:var(--gg-radius);overflow:hidden;background:var(--gg-panel);}
+  .gg-video-row{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;
+    padding:16px 18px;border-bottom:1px solid var(--gg-line);transition:.18s;
+  }
+  .gg-video-row:last-child{border-bottom:0;}
+  .gg-video-row:hover{background:var(--gg-panel-2);}
+  .gg-video-row h3{font-size:15px;font-weight:800;margin-bottom:5px;}
+  .gg-video-row p{font-size:12.8px;color:var(--gg-muted);line-height:1.7;margin-bottom:8px;}
+  .gg-video-row .gg-actions-row{padding-top:0;}
+  .gg-video-summary{text-align:right;font-size:12px;color:var(--gg-muted);white-space:nowrap;display:flex;flex-direction:column;gap:4px;}
+  .gg-video-summary b{color:var(--gg-text);font-size:14px;}
+
+  /* 专题 */
+  .gg-topic{
+    background:linear-gradient(160deg,var(--gg-panel-2),var(--gg-panel));
+    border:1px solid var(--gg-line);border-radius:var(--gg-radius);padding:18px 19px;
+    display:flex;flex-direction:column;gap:11px;
+  }
+  .gg-topic h3{font-size:16px;font-weight:800;}
+  .gg-topic > p{font-size:12.8px;color:var(--gg-muted);line-height:1.72;}
+  .gg-topic ul{display:flex;flex-direction:column;gap:7px;margin-top:2px;}
+  .gg-topic li{font-size:12.8px;color:#c0cbe0;padding-left:15px;position:relative;line-height:1.62;}
+  .gg-topic li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--gg-gold);}
+  .gg-topic-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;}
+
+  /* 品牌故事 */
+  .gg-story-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:26px;align-items:start;}
+  .gg-story-copy h3{font-size:17px;font-weight:800;margin:22px 0 9px;}
+  .gg-story-copy h3:first-child{margin-top:0;}
+  .gg-story-copy p{font-size:14px;color:#c3cde2;line-height:1.9;margin-bottom:10px;}
+  .gg-story-copy p b{color:var(--gg-gold);}
+  .gg-story-aside{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:var(--gg-radius);
+    padding:18px;display:flex;flex-direction:column;gap:14px;
+  }
+  .gg-story-aside img{border-radius:10px;aspect-ratio:4/3;object-fit:cover;width:100%;}
+  .gg-quote{
+    border-left:3px solid var(--gg-gold);padding:6px 0 6px 14px;
+    font-size:13.5px;color:#d5deef;line-height:1.8;font-style:italic;
+  }
+  .gg-quote cite{display:block;font-style:normal;font-size:12px;color:var(--gg-muted);margin-top:7px;}
+
+  /* 作者 */
+  .gg-author{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:var(--gg-radius);
+    padding:16px;display:flex;flex-direction:column;gap:10px;transition:.2s;min-width:0;
+  }
+  .gg-author:hover{border-color:#3b4a68;transform:translateY(-2px);}
+  .gg-author-head{display:flex;align-items:center;gap:11px;}
+  .gg-avatar{
+    width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;
+    font-weight:900;font-size:16px;color:#101625;letter-spacing:.5px;
+  }
+  .gg-author-name{font-size:14.5px;font-weight:800;}
+  .gg-author-field{font-size:11.5px;color:var(--gg-mint);font-weight:700;}
+  .gg-author p{font-size:12.6px;color:var(--gg-muted);line-height:1.72;}
+  .gg-author-nums{display:flex;gap:14px;font-size:11.5px;color:#8494b2;}
+  .gg-author-nums b{color:var(--gg-text);}
+
+  /* 评价 */
+  .gg-review{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:12px;
+    padding:15px 16px;display:flex;flex-direction:column;gap:8px;min-width:0;
+  }
+  .gg-review-top{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  .gg-review-user{font-size:12.5px;font-weight:800;color:var(--gg-gold);}
+  .gg-stars{font-size:12px;letter-spacing:2px;color:var(--gg-gold);}
+  .gg-review p{font-size:13px;color:#c3cde2;line-height:1.78;}
+  .gg-review time{font-size:11px;color:#7c8aa6;}
+  .gg-review.gg-review-quote{
+    background:linear-gradient(150deg,rgba(75,225,176,.09),var(--gg-panel));
+    border-color:rgba(75,225,176,.32);
+  }
+  .gg-review.gg-review-quote p{font-size:14px;font-style:italic;}
+
+  /* 企业动态 / FAQ / 合作 */
+  .gg-news-item{
+    display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--gg-line);
+  }
+  .gg-news-item:last-child{border-bottom:0;}
+  .gg-news-date{
+    flex:none;width:62px;font-size:11.5px;font-weight:800;color:var(--gg-gold);
+    background:rgba(255,201,77,.1);border:1px solid rgba(255,201,77,.28);
+    border-radius:8px;padding:5px 0;text-align:center;height:fit-content;line-height:1.4;
+  }
+  .gg-news-item h4{font-size:13.8px;font-weight:800;margin-bottom:4px;}
+  .gg-news-item p{font-size:12.6px;color:var(--gg-muted);line-height:1.7;}
+  .gg-faq details{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:11px;
+    padding:0;margin-bottom:10px;overflow:hidden;
+  }
+  .gg-faq summary{
+    cursor:pointer;padding:14px 44px 14px 16px;font-size:14px;font-weight:700;
+    list-style:none;position:relative;
+  }
+  .gg-faq summary::-webkit-details-marker{display:none;}
+  .gg-faq summary::after{
+    content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+    font-size:18px;font-weight:400;color:var(--gg-gold);
+  }
+  .gg-faq details[open] summary::after{content:"−";}
+  .gg-faq details[open] summary{color:var(--gg-gold);}
+  .gg-faq-body{padding:0 16px 15px;font-size:13px;color:var(--gg-muted);line-height:1.8;}
+  .gg-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+  .gg-partner{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:12px;
+    padding:16px 12px;text-align:center;font-size:13px;font-weight:800;color:#c3cde2;
+    display:flex;flex-direction:column;gap:6px;align-items:center;transition:.2s;
+  }
+  .gg-partner:hover{border-color:rgba(255,201,77,.5);color:var(--gg-gold);}
+  .gg-partner small{font-size:11px;font-weight:600;color:var(--gg-muted);}
+  .gg-partner-mark{
+    width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+    background:var(--gg-panel-2);color:var(--gg-gold);font-size:14px;font-weight:900;
+  }
+
+  /* 投稿 CTA */
+  .gg-cta{
+    background:linear-gradient(115deg,rgba(255,201,77,.14),rgba(255,122,156,.1) 55%,rgba(105,168,255,.13));
+    border:1px solid rgba(255,201,77,.3);
+    border-radius:18px;padding:30px 26px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .gg-cta h3{font-size:20px;font-weight:900;margin-bottom:6px;}
+  .gg-cta p{font-size:13.5px;color:#c3cde2;max-width:560px;line-height:1.75;}
+
+  /* 页脚 */
+  .gg-footer{background:#0b0f19;padding:46px 0 26px;border-top:1px solid var(--gg-line);}
+  .gg-footer-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,2.4fr) minmax(0,2.4fr) minmax(0,3fr);gap:26px;}
+  .gg-footer h4{font-size:13px;font-weight:800;margin-bottom:12px;color:var(--gg-text);}
+  .gg-footer p,.gg-footer li{font-size:12.6px;color:var(--gg-muted);line-height:1.9;}
+  .gg-footer li a:hover{color:var(--gg-gold);}
+  .gg-footer-brand{display:flex;align-items:center;gap:9px;margin-bottom:12px;}
+  .gg-footer-bottom{
+    margin-top:30px;padding-top:18px;border-top:1px solid var(--gg-line);
+    display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;
+    font-size:12px;color:#7c8aa6;
+  }
+
+  /* Toast & 弹窗 */
+  .gg-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+    background:#ffc94d;color:#20180a;font-size:13px;font-weight:800;
+    padding:10px 20px;border-radius:999px;z-index:400;opacity:0;pointer-events:none;
+    transition:.25s;box-shadow:0 14px 30px -12px rgba(0,0,0,.8);
+  }
+  .gg-toast.gg-show{opacity:1;transform:translate(-50%,0);}
+  .gg-modal{
+    position:fixed;inset:0;z-index:300;display:none;
+    align-items:center;justify-content:center;padding:20px;
+    background:rgba(6,9,16,.72);backdrop-filter:blur(4px);
+  }
+  .gg-modal.gg-open{display:flex;}
+  .gg-modal-card{
+    background:var(--gg-panel);border:1px solid var(--gg-line);border-radius:16px;
+    width:min(520px,100%);padding:24px;position:relative;max-height:86vh;overflow:auto;
+  }
+  .gg-modal-card h3{font-size:18px;font-weight:900;margin-bottom:8px;}
+  .gg-modal-card p{font-size:13px;color:var(--gg-muted);line-height:1.8;margin-bottom:14px;}
+  .gg-modal-close{
+    position:absolute;right:12px;top:10px;width:30px;height:30px;border-radius:50%;
+    border:1px solid var(--gg-line);background:var(--gg-panel-2);color:var(--gg-text);font-size:16px;
+  }
+  .gg-modal textarea,.gg-modal input[type=text]{
+    width:100%;background:var(--gg-bg-soft);border:1px solid var(--gg-line);border-radius:10px;
+    color:var(--gg-text);font-size:13px;padding:11px 13px;outline:none;margin-bottom:10px;font-family:inherit;
+  }
+  .gg-modal textarea{min-height:92px;resize:vertical;}
+  .gg-modal textarea:focus,.gg-modal input[type=text]:focus{border-color:var(--gg-gold);}
+  .gg-share-row{display:flex;flex-wrap:wrap;gap:9px;}
+  .gg-share-chip{
+    font-size:12.5px;font-weight:700;padding:8px 15px;border-radius:999px;
+    background:var(--gg-panel-2);border:1px solid var(--gg-line);color:var(--gg-text);
+  }
+  .gg-share-chip:hover{border-color:var(--gg-gold);color:var(--gg-gold);}
+  .gg-search-feedback{
+    font-size:12.5px;color:var(--gg-mint);margin-bottom:14px;min-height:20px;font-weight:700;
+  }
+  .gg-search-feedback.gg-warn{color:var(--gg-pink);}
+  .gg-search-feedback.gg-ok{color:var(--gg-mint);}
+  .gg-float-top{
+    position:fixed;right:20px;bottom:24px;z-index:200;
+    width:42px;height:42px;border-radius:50%;border:1px solid var(--gg-line);
+    background:var(--gg-panel-2);color:var(--gg-gold);font-size:17px;
+    display:none;place-items:center;box-shadow:0 12px 26px -10px rgba(0,0,0,.9);
+  }
+  .gg-float-top.gg-show{display:grid;}
+  .gg-empty-tip{font-size:13px;color:var(--gg-muted);padding:14px 0;}
+
+  /* 数字滚动基线 */
+  .gg-num{font-variant-numeric:tabular-nums;}
+
+  @media (max-width:980px){
+    .gg-nav{display:none;}
+    .gg-burger{display:grid;place-items:center;}
+    .gg-search input{width:140px;}
+    .gg-search input:focus{width:170px;}
+    .gg-hero-grid{grid-template-columns:1fr;gap:28px;}
+    .gg-focus{grid-template-columns:1fr;}
+    .gg-story-grid{grid-template-columns:1fr;}
+    .gg-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .gg-grid-3,.gg-grid-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .gg-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:620px){
+    .gg-hero-stats{grid-template-columns:1fr;gap:8px;}
+    .gg-grid-2,.gg-grid-3,.gg-grid-4{grid-template-columns:1fr;}
+    .gg-video-row{grid-template-columns:1fr;gap:8px;}
+    .gg-video-summary{flex-direction:row;gap:14px;text-align:left;}
+    .gg-footer-grid{grid-template-columns:1fr;}
+    .gg-announce-link{display:none;}
+    .gg-search{display:none;}
+    .gg-header-inner{gap:12px;}
+    .gg-hero{padding:32px 0 40px;}
+    .gg-rank-row{grid-template-columns:34px minmax(0,1fr);}
+    .gg-rank-val{grid-column:2;justify-self:start;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶区：公告条 + 页头 ===== -->
+<div class="gg-sticky-top" id="ggTopArea">
+  <div class="gg-announce" role="region" aria-label="站点公告">
+    <div class="gg-announce-inner">
+      <span class="gg-announce-badge">最新</span>
+      <span class="gg-announce-track">「深夜不打烊」第 12 季素材库已上线，新增 36 条独家现场片段与 4 位驻站创作者专访；《城市背后的声音》系列开放报名与上传通道。</span>
+      <a class="gg-announce-link" href="#ggNotice">查看更新 →</a>
+    </div>
+  </div>
+  <header class="gg-header">
+    <div class="gg-header-inner">
+      <a class="gg-logo" href="#ggTopArea" aria-label="黑料瓜瓜网站不打烊 首页">
+        <span class="gg-logo-mark" aria-hidden="true">瓜</span>
+        <span class="gg-logo-text">黑料瓜瓜网站不打烊</span>
+      </a>
+      <nav class="gg-nav" aria-label="主导航">
+        <a href="#ggNotice">社区动态</a>
+        <a href="#ggFocus">焦点推荐</a>
+        <a href="#ggRank">热度榜单</a>
+        <a href="#ggTopic">专题企划</a>
+        <a href="#ggStory">品牌故事</a>
+        <a href="#ggAuthors">创作者</a>
+        <a href="#ggReviews">用户口碑</a>
+        <a href="#ggFaq">帮助中心</a>
+      </nav>
+      <div class="gg-head-tools">
+        <form class="gg-search" id="ggSearchForm" role="search" onsubmit="return false;">
+          <label class="gg-sr-only" for="ggSearchInput">搜索站内内容</label>
+          <input id="ggSearchInput" type="text" placeholder="搜索瓜料、作者、专题" autocomplete="off">
+          <button type="submit" id="ggSearchBtn" aria-label="执行搜索">搜</button>
+        </form>
+        <button class="gg-btn gg-btn-gold" type="button" data-gg-open="submit">投稿入驻</button>
+        <button class="gg-burger" type="button" id="ggBurger" aria-label="展开移动端导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <nav class="gg-mobile-nav" id="ggMobileNav" aria-label="移动端导航">
+      <div class="gg-wrap">
+        <a href="#ggNotice">社区动态</a>
+        <a href="#ggFocus">焦点推荐</a>
+        <a href="#ggRank">热度榜单</a>
+        <a href="#ggTopic">专题企划</a>
+        <a href="#ggStory">品牌故事</a>
+        <a href="#ggAuthors">创作者</a>
+        <a href="#ggReviews">用户口碑</a>
+        <a href="#ggFaq">帮助中心</a>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<!-- ===== 首屏 ===== -->
+<section class="gg-hero" id="ggHero" aria-labelledby="ggHeroTitle">
+  <div class="gg-wrap">
+    <div class="gg-hero-grid">
+      <div>
+        <span class="gg-hero-tag"><i></i>官方网站 · 原创高清 · 持续运营中</span>
+        <h1 id="ggHeroTitle">黑料瓜瓜网站不打烊</h1>
+        <p class="gg-hero-sub">不打烊的影像社区，把每一次现场记录变成可回看的真实。</p>
+        <p class="gg-hero-intro">
+          作为专注真实影像与企业级内容运营的视频品牌，<b>黑料瓜瓜网站不打烊</b>官方网站深耕现场记录、人物访谈与深度故事三大内容方向，为创作者与观众搭建高品质内容生态。
+          平台坚持正版授权与高清制作，以专业审核与持续更新陪伴每一位用户；我们相信真实最有力量，也相信好内容值得被长期看见。
+        </p>
+        <div class="gg-hero-stats">
+          <div class="gg-stat"><strong class="gg-num" data-gg-count="12800" data-gg-suffix="+">0</strong><span>原创高清视频累计</span></div>
+          <div class="gg-stat"><strong class="gg-num" data-gg-count="426" data-gg-suffix=" 位">0</strong><span>签约与驻站创作者</span></div>
+          <div class="gg-stat"><strong class="gg-num" data-gg-count="97" data-gg-suffix="%">0</strong><span>社区口碑好评率</span></div>
+        </div>
+        <div class="gg-hero-actions">
+          <a class="gg-btn gg-btn-gold" href="#ggFocus">进入内容入口</a>
+          <a class="gg-btn gg-btn-ghost" href="#ggRank">查看热度榜单</a>
+          <button class="gg-btn gg-btn-ghost" type="button" data-gg-open="guide">创作者攻略</button>
+          <button class="gg-btn gg-btn-ghost" type="button" data-gg-open="report">反馈与举报</button>
+        </div>
+      </div>
+      <div class="gg-hero-visual">
+        <img
+          src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23151d31'/%3E%3Cstop offset='1' stop-color='%232a1d33'/%3E%3C/linearGradient%3E%3ClinearGradient id='gl' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffc94d'/%3E%3Cstop offset='1' stop-color='%23ff7a9c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23sky)'/%3E%3Ccircle cx='600' cy='150' r='96' fill='%23ffc94d' opacity='.22'/%3E%3Ccircle cx='600' cy='150' r='60' fill='%23ffc94d' opacity='.55'/%3E%3Cpath d='M0 470 L160 350 L300 430 L440 300 L600 400 L800 300 L800 600 L0 600 Z' fill='%231a2438'/%3E%3Cpath d='M0 520 L140 420 L280 490 L430 380 L620 470 L800 400 L800 600 L0 600 Z' fill='%23121a2b'/%3E%3Cg fill='%23ffc94d' opacity='.85'%3E%3Crect x='96' y='392' width='12' height='12' rx='2'/%3E%3Crect x='128' y='368' width='9' height='9' rx='2'/%3E%3Crect x='210' y='420' width='8' height='8' rx='2'/%3E%3Crect x='330' y='372' width='10' height='10' rx='2'/%3E%3Crect x='505' y='400' width='9' height='9' rx='2'/%3E%3Crect x='700' y='352' width='11' height='11' rx='2'/%3E%3C/g%3E%3Cg%3E%3Crect x='250' y='120' width='300' height='8' rx='4' fill='%23ffc94d' opacity='.5'/%3E%3Crect x='250' y='140' width='180' height='6' rx='3' fill='%23ffffff' opacity='.25'/%3E%3C/g%3E%3Ccircle cx='400' cy='270' r='54' fill='none' stroke='url(%23gl)' stroke-width='5'/%3E%3Cpath d='M386 246 L432 270 L386 294 Z' fill='%23ffc94d'/%3E%3Ctext x='400' y='560' text-anchor='middle' font-family='sans-serif' font-size='22' fill='%23c3cde2' opacity='.7'%3E不打烊 · 现场影像计划%3C/text%3E%3C/svg%3E"
+          alt="黑料瓜瓜网站不打烊首屏主视觉：夜色中的城市剪影与播放标识"
+          width="800" height="600" loading="eager">
+        <div class="gg-hero-badge"><span class="gg-live-dot" aria-hidden="true"></span>不打烊直播间 <b>24 小时轮播中</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 社区动态（企业动态 + 更新日志） ===== -->
+<section class="gg-section" id="ggNotice" aria-labelledby="ggNoticeTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Community Feed</span>
+        <h2 id="ggNoticeTitle">黑料瓜瓜网站不打烊 <span>社区动态与官方发布</span></h2>
+        <p>官方发布节奏、内容更新日志与创作者扶持计划，这里记录平台每一天的真实进展。</p>
+      </div>
+    </div>
+    <div class="gg-grid-2" style="align-items:start;">
+      <div>
+        <h3 style="font-size:16px;font-weight:800;margin-bottom:14px;">企业动态</h3>
+        <div class="gg-news-item">
+          <span class="gg-news-date">11-20</span>
+          <div>
+            <h4>「深夜不打烊」第 12 季素材库正式开放</h4>
+            <p>新增 36 条独家现场片段，全部支持高清下载与二次创作授权，创作者可在后台一键申领素材包。</p>
+          </div>
+        </div>
+        <div class="gg-news-item">
+          <span class="gg-news-date">11-16</span>
+          <div>
+            <h4>创作者扶持计划 4.0 启动报名</h4>
+            <p>面向真实故事与城市探索方向，入选者将获得拍摄设备支持、专属流量位与一对一编导辅导。</p>
+          </div>
+        </div>
+        <div class="gg-news-item">
+          <span class="gg-news-date">11-08</span>
+          <div>
+            <h4>内容审核标准公开更新</h4>
+            <p>平台进一步明确隐私保护与素材授权边界，所有上传内容需完成正版声明，保障社区口碑与用户权益。</p>
+          </div>
+        </div>
+        <div class="gg-news-item">
+          <span class="gg-news-date">10-29</span>
+          <div>
+            <h4>移动端播放器体验升级</h4>
+            <p>优化倍速、字幕与合集连播逻辑，弱网环境下高清视频加载速度提升约 35%。</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:16px;font-weight:800;margin-bottom:14px;">本周热议话题</h3>
+        <div class="gg-grid-2" style="gap:12px;">
+          <div class="gg-review gg-review-quote">
+            <div class="gg-review-top"><span class="gg-review-user">#城市背后的声音</span><span class="gg-stars">★★★★★</span></div>
+            <p>“把凌晨三点的街道拍得这么有温度，看完想立刻出门走走。”</p>
+            <time>本周参与 2,140 次</time>
+          </div>
+          <div class="gg-review">
+            <div class="gg-review-top"><span class="gg-review-user">#真实力量计划</span><span class="gg-stars">★★★★☆</span></div>
+            <p>“投稿通道很顺畅，审核反馈也比想象中快，感谢平台对普通创作者的耐心。”</p>
+            <time>本周参与 1,760 次</time>
+          </div>
+          <div class="gg-review">
+            <div class="gg-review-top"><span class="gg-review-user">#不打烊夜谈</span><span class="gg-stars">★★★★★</span></div>
+            <p>“访谈节奏舒服，不煽情但有力量，希望多做几期幕后花絮。”</p>
+            <time>本周参与 1,320 次</time>
+          </div>
+          <div class="gg-review">
+            <div class="gg-review-top"><span class="gg-review-user">#素材共创挑战</span><span class="gg-stars">★★★★☆</span></div>
+            <p>“给了剪辑思路模板，新人也能快速上手，期待下一期挑战题。”</p>
+            <time>本周参与 980 次</time>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 焦点推荐 + 视频条目 ===== -->
+<section class="gg-section" id="ggFocus" aria-labelledby="ggFocusTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Focus · 一本正经地看瓜</span>
+        <h2 id="ggFocusTitle">焦点推荐 <span>· 今日值得点开的三件事</span></h2>
+        <p>黑料瓜瓜网站不打烊编辑团队每日筛选真实、有信息量的内容，重点条目配封面，其余以文字摘要呈现。</p>
+      </div>
+    </div>
+
+    <div class="gg-search-feedback" id="ggSearchFeedback" aria-live="polite"></div>
+
+    <div class="gg-focus" id="ggFocusGrid">
+      <article class="gg-focus-main gg-content-item" data-keywords="深夜不打烊 现场 城市 声音 记录">
+        <img
+          src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='n1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d2439'/%3E%3Cstop offset='1' stop-color='%23352a4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23n1)'/%3E%3Cg stroke='%23ffc94d' stroke-width='2' opacity='.5'%3E%3Cpath d='M0 340 L120 300 L240 330 L380 270 L520 320 L660 250 L800 300' fill='none'/%3E%3C/g%3E%3Cg fill='%2369a8ff' opacity='.75'%3E%3Crect x='80' y='220' width='34' height='120'/%3E%3Crect x='140' y='180' width='26' height='160'/%3E%3Crect x='196' y='250' width='40' height='90'/%3E%3Crect x='560' y='200' width='30' height='140'/%3E%3Crect x='620' y='240' width='44' height='100'/%3E%3Crect x='690' y='170' width='24' height='170'/%3E%3C/g%3E%3Ccircle cx='420' cy='150' r='42' fill='none' stroke='%23ffc94d' stroke-width='4'/%3E%3Cpath d='M410 132 l32 18 -32 18 z' fill='%23ffc94d'/%3E%3Ctext x='400' y='415' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%23c3cde2'%3E凌晨三点的声音采样 · 第 12 季%3C/text%3E%3C/svg%3E"
+          alt="焦点封面：凌晨三点的城市楼群与播放按钮，深夜声音采样系列"
+          width="800" height="450" loading="lazy">
+        <div class="gg-card-body">
+          <div class="gg-meta">
+            <span class="gg-chip gg-chip-gold">重点推荐</span>
+            <span class="gg-chip">城市探索</span>
+            <span>夜航瓜皮</span>
+            <span>· 2026-11-20</span>
+          </div>
+          <h3>凌晨三点的声音采样：一座城市不打烊的 18 个瞬间</h3>
+          <p>从便利店关东煮的咕嘟声，到末班地铁回库的金属摩擦，我们把麦克风交给夜班工作者，让他们决定镜头之外该被听见的部分。这条 26 分钟的长片拍摄横跨 9 个街区，所有素材均在授权范围内完成，评论区已开放声音补充投稿。</p>
+          <div class="gg-actions-row">
+            <button class="gg-mini-btn" type="button" data-gg-like data-gg-count="4218">赞 <span class="gg-like-num">4218</span></button>
+            <button class="gg-mini-btn" type="button" data-gg-fav>收藏</button>
+            <button class="gg-mini-btn" type="button" data-gg-share>分享</button>
+            <span class="gg-meta">播放 12.6 万 · 收藏 3,402</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="gg-focus-list">
+        <article class="gg-focus-item gg-content-item" data-keywords="访谈 创作者 幕后 真实 力量">
+          <span class="gg-focus-num">01</span>
+          <div>
+            <h4>访谈｜镜头对准普通人之后，我学会了闭嘴</h4>
+            <p>跟拍三年的纪录片导演聊聊“真实”的边界，以及为什么平台坚持原创与正版授权。12 条来自一线的拍摄建议，适合刚入门的创作者。</p>
+            <div class="gg-meta" style="margin-top:6px;"><span class="gg-chip gg-chip-mint">人物访谈</span><span>播放 8.4 万</span></div>
+          </div>
+        </article>
+        <article class="gg-focus-item gg-content-item" data-keywords="教程 剪辑 攻略 创意">
+          <span class="gg-focus-num">02</span>
+          <div>
+            <h4>教程｜一格画面讲清一件事：短纪录片的剪辑三分法</h4>
+            <p>从素材整理到结构搭建，拆解 5 个真实案例。附可下载的剪辑思路表，帮你在 90 分钟内完成一支可发布的成片。</p>
+            <div class="gg-meta" style="margin-top:6px;"><span class="gg-chip gg-chip-gold">教程干货</span><span>播放 6.2 万</span></div>
+          </div>
+        </article>
+        <article class="gg-focus-item gg-content-item" data-keywords="城市 在地文化 旅行 生活">
+          <span class="gg-focus-num">03</span>
+          <div>
+            <h4>在地｜菜市场第六排，藏着一座城的味觉档案</h4>
+            <p>摊主们的早晨从四点开始。我们记录了三代人的手艺交接，也记录了街道变化带来的细微失落，这是城市影像社区最本真的部分。</p>
+            <div class="gg-meta" style="margin-top:6px;"><span class="gg-chip gg-chip-pink">在地文化</span><span>播放 5.8 万</span></div>
+          </div>
+        </article>
+        <article class="gg-focus-item gg-content-item" data-keywords="行业观察 深度测评 品质">
+          <span class="gg-focus-num">04</span>
+          <div>
+            <h4>观察｜内容平台如何把“口碑”做成可验证的东西</h4>
+            <p>从审核流程到创作者成长体系，拆解黑料瓜瓜网站不打烊的内容治理逻辑，也谈企业责任与用户至上的具体落地方式。</p>
+            <div class="gg-meta" style="margin-top:6px;"><span class="gg-chip">行业观察</span><span>播放 3.9 万</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:800;margin:30px 0 14px;">更多视频条目 <span style="color:var(--gg-gold);font-size:12px;">· 文字索引版</span></h3>
+    <div class="gg-video-list">
+      <div class="gg-video-row gg-content-item" data-keywords="幕后 拍摄 经验分享 现场">
+        <div>
+          <h3>幕后｜一条 5 分钟短片的 37 次重拍</h3>
+          <p>我们跟着摄影组在雨里耗了两天。这条片子最终只保留 4 个镜头，但每一次重拍都换来了更干净的现场感。适合想学拍摄流程的新人。</p>
+          <div class="gg-meta"><span class="gg-chip gg-chip-mint">创作幕后</span><span>瓜田守夜人</span><span>2026-11-18</span></div>
+          <div class="gg-actions-row">
+            <button class="gg-mini-btn" type="button" data-gg-like data-gg-count="1860">赞 <span class="gg-like-num">1860</span></button>
+            <button class="gg-mini-btn" type="button" data-gg-fav>收藏</button>
+          </div>
+        </div>
+        <div class="gg-video-summary"><span>播放 <b>4.1 万</b></span><span>评论 236</span></div>
+      </div>
+      <div class="gg-video-row gg-content-item" data-keywords="知识 科普 城市 观察">
+        <div>
+          <h3>科普｜为什么老城区总在夜里“活过来”</h3>
+          <p>用一份持续两年的夜间人流采样数据，解释街区活力与照明、业态、住区结构之间的关系，配有可视化作图说明。</p>
+          <div class="gg-meta"><span class="gg-chip gg-chip-gold">知识科普</span><span>半盏瓜灯</span><span>2026-11-15</span></div>
+          <div class="gg-actions-row">
+            <button class="gg-mini-btn" type="button" data-gg-like data-gg-count="1240">赞 <span class="gg-like-num">1240</span></button>
+            <button class="gg-mini-btn" type="button" data-gg-fav>收藏</button>
+          </div>
+        </div>
+        <div class="gg-video-summary"><span>播放 <b>3.3 万</b></span><span>评论 148</span></div>
+      </div>
+      <div class="gg-video-row gg-content-item" data-keywords="情感 故事 陪伴 真实">
+        <div>
+          <h3>故事｜母亲的第一条自拍视频</h3>
+          <p>她把镜头对准自己，讲了十二分钟。没有脚本、没有打光，只有一张略显紧张的椅子。我们把这条未经修剪的素材做成了正片。</p>
+          <div class="gg-meta"><span class="gg-chip gg-chip-pink">情感故事</span><span>瓜皮放映员</span><span>2026-11-12</span></div>
+          <div class="gg-actions-row">
+            <button class="gg-mini-btn" type="button" data-gg-like data-gg-count="5230">赞 <span class="gg-like-num">5230</span></button>
+            <button class="gg-mini-btn" type="button" data-gg-fav>收藏</button>
+          </div>
+        </div>
+        <div class="gg-video-summary"><span>播放 <b>9.7 万</b></span><span>评论 512</span></div>
+      </div>
+      <div class="gg-video-row gg-content-item" data-keywords="实用技巧 上传 攻略 正版">
+        <div>
+          <h3>技巧｜一条合规素材从上传到上线的完整路径</h3>
+          <p>正版声明怎么写、授权文件怎么存、二次创作怎样标注来源，一条视频讲清上传前后的关键节点，减少审核往返。</p>
+          <div class="gg-meta"><span class="gg-chip gg-chip-mint">实用技巧</span><span>审核小助手</span><span>2026-11-09</span></div>
+          <div class="gg-actions-row">
+            <button class="gg-mini-btn" type="button" data-gg-like data-gg-count="980">赞 <span class="gg-like-num">980</span></button>
+            <button class="gg-mini-btn" type="button" data-gg-fav>收藏</button>
+          </div>
+        </div>
+        <div class="gg-video-summary"><span>播放 <b>2.4 万</b></span><span>评论 96</span></div>
+      </div>
+      <div class="gg-video-row gg-content-item" data-keywords="户外 露营 治愈 影像">
+        <div>
+          <h3>治愈｜雨天森林的 24 小时，只留环境音</h3>
+          <p>不配乐、不解说，只有雨落在帐篷上的声音。这条影像上线后被大量用户用作背景播放，后台数据显示平均观看时长 18 分钟。</p>
+          <div class="gg-meta"><span class="gg-chip">治愈影像</span><span>夜航瓜皮</span><span>2026-11-06</span></div>
+          <div class="gg-actions-row">
+            <button class="gg-mini-btn" type="button" data-gg-like data-gg-count="3105">赞 <span class="gg-like-num">3105</span></button>
+            <button class="gg-mini-btn" type="button" data-gg-fav>收藏</button>
+          </div>
+        </div>
+        <div class="gg-video-summary"><span>播放 <b>7.5 万</b></span><span>评论 289</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 数据榜单 ===== -->
+<section class="gg-section" id="ggRank" aria-labelledby="ggRankTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Ranking</span>
+        <h2 id="ggRankTitle">数据榜单 <span>· 热度、新人、口碑三条线</span></h2>
+        <p>黑料瓜瓜网站不打烊每周更新公开榜单，数据来自真实播放、互动与审核通过率，不售卖排名。</p>
+      </div>
+    </div>
+    <div class="gg-rank-tabs" role="tablist" aria-label="榜单切换">
+      <button class="gg-rank-tab gg-active" type="button" data-gg-rank="hot" role="tab" aria-selected="true">热度榜</button>
+      <button class="gg-rank-tab" type="button" data-gg-rank="new" role="tab" aria-selected="false">新人榜</button>
+      <button class="gg-rank-tab" type="button" data-gg-rank="word" role="tab" aria-selected="false">口碑榜</button>
+    </div>
+    <div class="gg-rank-panel">
+      <div class="gg-rank-row"><span class="gg-rank-no">1</span><div><div class="gg-rank-title">凌晨三点的声音采样：18 个不打烊瞬间</div><div class="gg-rank-sub">城市探索 · 夜航瓜皮 · 互动 4,218</div></div><span class="gg-rank-val">热度 98.6</span></div>
+      <div class="gg-rank-row"><span class="gg-rank-no">2</span><div><div class="gg-rank-title">母亲的第一条自拍视频</div><div class="gg-rank-sub">情感故事 · 瓜皮放映员 · 互动 5,230</div></div><span class="gg-rank-val">热度 96.2</span></div>
+      <div class="gg-rank-row"><span class="gg-rank-no">3</span><div><div class="gg-rank-title">菜市场第六排：一座城的味觉档案</div><div class="gg-rank-sub">在地文化 · 半盏瓜灯 · 互动 3,870</div></div><span class="gg-rank-val">热度 94.1</span></div>
+      <div class="gg-rank-row"><span class="gg-rank-no">4</span><div><div class="gg-rank-title">雨天森林 24 小时，只留环境音</div><div class="gg-rank-sub">治愈影像 · 夜航瓜皮 · 互动 3,105</div></div><span class="gg-rank-val">热度 91.8</span></div>
+      <div class="gg-rank-row"><span class="gg-rank-no">5</span><div><div class="gg-rank-title">一条合规素材的上线全路径</div><div class="gg-rank-sub">实用技巧 · 审核小助手 · 互动 980</div></div><span class="gg-rank-val">热度 88.4</span></div>
+      <div class="gg-rank-row"><span class="gg-rank-no">6</span><div><div class="gg-rank-title">一条短片背后的 37 次重拍</div><div class="gg-rank-sub">创作幕后 · 瓜田守夜人 · 互动 1,860</div></div><span class="gg-rank-val">热度 86.9</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 专题企划 ===== -->
+<section class="gg-section" id="ggTopic" aria-labelledby="ggTopicTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Series</span>
+        <h2 id="ggTopicTitle">专题企划 <span>· 值得追更的四条内容线</span></h2>
+        <p>每个专题都有明确更新节奏与投稿入口，欢迎创作者带着真实素材加入，共建多元内容生态。</p>
+      </div>
+    </div>
+    <div class="gg-grid-2">
+      <div class="gg-topic gg-content-item" data-keywords="专题 城市 在地文化 共创">
+        <div class="gg-meta"><span class="gg-chip gg-chip-gold">连载中</span><span>更新至第 12 期</span></div>
+        <h3>城市背后的声音</h3>
+        <p>把镜头交给夜班工作者、摊主与守门人，记录那些白天听不见的城市声响。所有素材要求现场收音，禁止后期配音冒充现场。</p>
+        <ul>
+          <li>第 12 期：凌晨三点的便利店关东煮</li>
+          <li>第 11 期：末班地铁回库的十五分钟</li>
+          <li>第 10 期：菜市场第六排的清晨四点</li>
+        </ul>
+        <div class="gg-topic-foot"><span class="gg-meta">投稿已开放</span><button class="gg-mini-btn" type="button" data-gg-open="submit">我要报名</button></div>
+      </div>
+      <div class="gg-topic gg-content-item" data-keywords="专题 访谈 创作幕后 匠心">
+        <div class="gg-meta"><span class="gg-chip gg-chip-mint">每周三更新</span><span>已播 26 期</span></div>
+        <h3>不打烊夜谈</h3>
+        <p>一次只问一个问题的长访谈。我们邀请纪录片导演、剪辑师、声音设计师与普通投稿者，聊创作里的犹豫和坚持，尽量不打断。</p>
+        <ul>
+          <li>第 26 期：镜头对准普通人之后，我学会了闭嘴</li>
+          <li>第 25 期：剪辑台上的取舍，是一种道德选择</li>
+          <li>第 24 期：声音设计师的“隐形工作法”</li>
+        </ul>
+        <div class="gg-topic-foot"><span class="gg-meta">可预约下期</span><button class="gg-mini-btn" type="button" data-gg-open="guide">查看攻略</button></div>
+      </div>
+      <div class="gg-topic gg-content-item" data-keywords="专题 真实 力量 故事 比赛">
+        <div class="gg-meta"><span class="gg-chip gg-chip-pink">年度企划</span><span>征集中</span></div>
+        <h3>真实力量计划</h3>
+        <p>面向所有用户的非虚构影像征集。没有题材限制，只看是否真诚、是否完成基础授权、是否尊重被拍摄者。入选作品获得首页推荐与制作支持。</p>
+        <ul>
+          <li>年度投稿量：1,842 条</li>
+          <li>已上线成片：96 条</li>
+          <li>评审团：编导、摄影师、社区代表</li>
+        </ul>
+        <div class="gg-topic-foot"><span class="gg-meta">年度投票进行中</span><button class="gg-mini-btn" type="button" data-gg-open="submit">参与投稿</button></div>
+      </div>
+      <div class="gg-topic gg-content-item" data-keywords="专题 教程 挑战 剪辑 创意">
+        <div class="gg-meta"><span class="gg-chip">每月一期</span><span>第 8 期进行中</span></div>
+        <h3>素材共创挑战</h3>
+        <p>平台提供统一素材包，创作者在 48 小时内完成 60 秒成片。评分维度包括叙事完整度、音画匹配度与原创剪辑思路。</p>
+        <ul>
+          <li>本期素材：夜间街道环境音 12 段 + 空镜 8 组</li>
+          <li>奖励：专属流量位 + 设备租赁券</li>
+          <li>上期参与：318 位创作者</li>
+        </ul>
+        <div class="gg-topic-foot"><span class="gg-meta">下载通道开放</span><button class="gg-mini-btn" type="button" data-gg-open="guide">领取素材</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 品牌故事与关键词深度解析 ===== -->
+<section class="gg-section" id="ggStory" aria-labelledby="ggStoryTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Brand · Story &amp; Insight</span>
+        <h2 id="ggStoryTitle">品牌故事 <span>· 为什么我们坚持不打烊</span></h2>
+        <p>从一间临时剪辑棚到持续运营的视频社区，黑料瓜瓜网站不打烊官方网站的成长路径，也是一部关于真实与耐心的长篇记录。</p>
+      </div>
+    </div>
+    <div class="gg-story-grid">
+      <div class="gg-story-copy">
+        <h3>从一个深夜剪辑棚开始</h3>
+        <p>2019 年冬天，三位纪录片从业者在城郊租下一间老厂房，白天剪片，夜里讨论一个问题：为什么很多真实发生过的现场，最后没有被任何人完整记录？设备明明越来越便宜，故事却越来越难被看见。于是他们决定做一个“不打烊”的内容空间——白天拍摄，夜里上传，第二天清早审核，循环往复。<b>黑料瓜瓜网站不打烊</b>这个名字，本意是把玩笑和严肃放在一起：轻松地说，认真地做。</p>
+        <p>今天的平台已经是覆盖现场记录、人物访谈、知识科普与生活方式四大方向的视频社区。我们坚持原创优先、正版授权、高清呈现和人工加机器的双重审核，希望每一位创作者上传时都清楚边界，也信任规则。</p>
+
+        <h3>关键词解析：什么是不打烊的影像社区</h3>
+        <p>“黑料瓜瓜网站不打烊”在字面上带着强烈的生活语气，但在平台内部，它是一个相当具体的运营约定：内容供给不中断、社区沟通不中断、创作者支持不中断。我们把这个关键词拆成三层来理解：第一层是<b>“黑料”</b>，指的是未被加工过的现场原貌，是那些不够完美但足够真实的素材；第二层是<b>“瓜瓜”</b>，指的是社区围观与讨论的轻松氛围，允许调侃，也要求善意；第三层是<b>“不打烊”</b>，指的是持续运营的承诺，是审核、客服、更新与陪伴的长线投入。</p>
+        <p>基于这个理解，平台在内容侧建立了三条主线。第一条是现场线，要求投稿者尽量保留环境音与时间戳，减少过度修饰；第二条是人物线，所有访谈必须取得被访者书面同意，并在发布前完整回看；第三条是知识线，科普类内容需要标注信息来源与数据口径。三条线索交叉，构成我们对“真实”的完整定义：真实不是把镜头怼到人脸上，而是让素材的来源、边界和语境都清楚可查。</p>
+
+        <h3>内容生态：创作者、企业与用户的三方关系</h3>
+        <p>在内容生态上，黑料瓜瓜网站不打烊采用“创作者—企业—用户”三方共建的结构。创作者提供素材与视角，企业提供制作支持、版权保护与分发能力，用户通过观看、收藏、评论与投票，直接影响每周的推荐权重。我们不设付费买榜，榜单数据由播放、互动与审核通过率组成，公开可查。2026 年上线的创作者成长体系，把新人分成“观察者—记录者—合作者”三个阶段，每个阶段给予不同的工具权限和辅导资源，减少新人因不熟悉规则而受到的挫败。</p>
+        <p>平台也承担相应的社会责任：为在地文化记录提供公益拍摄名额，为普通用户提供隐私保护指引，为被拍摄者保留删除请求通道。这些看起来不像“增长手段”的工作，恰恰是我们认为最值得信赖的部分，也是口碑的来源。</p>
+
+        <h3>运营与品质：让高清和正版成为默认选项</h3>
+        <p>技术上，平台在弱网环境下优先保证音画同步，把高清播放的起播时间压缩在可接受范围内；管理上，所有上传内容需勾选正版与授权声明，违规内容进入人工复核队列；服务上，工作日的审核反馈一般不超过 24 小时，节假日安排值班。我们希望“黑料瓜瓜网站不打烊”不只是一个好记的名字，而是一条可验证的服务标准：内容持续更新、问题有回应、创作者有成长、社区有温度。</p>
+
+        <h3>持续运营：一场没有终点的长跑</h3>
+        <p>过去三年，我们拒绝了多次以噱头换流量的合作邀请，也经历过内容审核争议和公开说明。正是这些过程，让团队更清楚平台该坚持什么。接下来的一年，黑料瓜瓜网站不打烊将把重心放在三个方向：一是支持更多在地记录者完成长篇作品；二是完善创作者收入分配的透明度；三是把社区互助机制做成可复用的工具。我们相信，行业领先不是喊出来的，而是在一次次准时上线、一次次如实回复里慢慢积累的。</p>
+      </div>
+      <aside class="gg-story-aside">
+        <img
+          src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 450'%3E%3Crect width='600' height='450' fill='%23131a2a'/%3E%3Cg fill='none' stroke='%234be1b0' stroke-width='2' opacity='.55'%3E%3Ccircle cx='300' cy='200' r='120'/%3E%3Ccircle cx='300' cy='200' r='88'/%3E%3Ccircle cx='300' cy='200' r='56'/%3E%3C/g%3E%3Ccircle cx='300' cy='200' r='26' fill='%23ffc94d'/%3E%3Cg stroke='%23ffc94d' stroke-width='3' opacity='.8'%3E%3Cpath d='M300 40 v42'/%3E%3Cpath d='M300 318 v42'/%3E%3Cpath d='M140 200 h42'/%3E%3Cpath d='M418 200 h42'/%3E%3C/g%3E%3Ctext x='300' y='400' text-anchor='middle' font-family='sans-serif' font-size='20' fill='%23c3cde2' opacity='.8'%3E真实 · 陪伴 · 长期主义%3C/text%3E%3C/svg%3E"
+          alt="品牌故事配图：象征长期主义的同心圆与中心光点"
+          width="600" height="450" loading="lazy">
+        <blockquote class="gg-quote">
+          “我们不追求把每一条素材都拍成爆款，而是希望十年后回看，这些影像依然能证明当时有人在场。”
+          <cite>—— 黑料瓜瓜网站不打烊 内容负责人</cite>
+        </blockquote>
+        <div>
+          <div class="gg-meta" style="margin-bottom:6px;"><span class="gg-chip gg-chip-mint">企业使命</span></div>
+          <p style="font-size:13px;color:#c3cde2;line-height:1.8;">让真实被看见，让创作者被善待，让内容生态保持可持续的活力。</p>
+        </div>
+        <div>
+          <div class="gg-meta" style="margin-bottom:6px;"><span class="gg-chip gg-chip-gold">品牌关键词</span></div>
+          <p style="font-size:12.8px;color:var(--gg-muted);line-height:1.9;">官方网站 · 原创 · 正版 · 高清 · 社区 · 品质 · 匠心 · 陪伴 · 持续运营</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 创作者矩阵 ===== -->
+<section class="gg-section" id="ggAuthors" aria-labelledby="ggAuthorsTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Creators</span>
+        <h2 id="ggAuthorsTitle">创作者矩阵 <span>· 六位长期驻站的记录者</span></h2>
+        <p>他们风格各异，但都在同一个原则下工作：尊重被拍摄者，如实呈现现场。</p>
+      </div>
+    </div>
+    <div class="gg-grid-3">
+      <article class="gg-author gg-content-item" data-keywords="夜航瓜皮 城市 声音 创作者">
+        <div class="gg-author-head">
+          <span class="gg-avatar" style="background:linear-gradient(140deg,#ffc94d,#ff9d5c);" aria-hidden="true">夜</span>
+          <div>
+            <div class="gg-author-name">夜航瓜皮</div>
+            <div class="gg-author-field">城市探索 / 现场收音</div>
+          </div>
+        </div>
+        <p>常驻城市夜班，擅长用环境音讲故事。拍摄前习惯先和现场每个人聊十分钟，确认对方理解镜头会出现在哪里。作品节奏慢，但信息密度高。</p>
+        <div class="gg-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>12.4 万</b></span></div>
+        <button class="gg-mini-btn" type="button" data-gg-author="夜航瓜皮">作者信息</button>
+      </article>
+      <article class="gg-author gg-content-item" data-keywords="瓜皮放映员 情感 故事 陪伴">
+        <div class="gg-author-head">
+          <span class="gg-avatar" style="background:linear-gradient(140deg,#ff7a9c,#c86bff);" aria-hidden="true">瓜</span>
+          <div>
+            <div class="gg-author-name">瓜皮放映员</div>
+            <div class="gg-author-field">情感故事 / 家庭影像</div>
+          </div>
+        </div>
+        <p>从家庭录像带修复开始做视频，坚信普通人的日常值得被认真对待。剪辑风格克制，很少用配乐推情绪，喜欢留下呼吸和停顿。</p>
+        <div class="gg-author-nums"><span>作品 <b>64</b></span><span>粉丝 <b>9.8 万</b></span></div>
+        <button class="gg-mini-btn" type="button" data-gg-author="瓜皮放映员">作者信息</button>
+      </article>
+      <article class="gg-author gg-content-item" data-keywords="半盏瓜灯 知识 科普 城市">
+        <div class="gg-author-head">
+          <span class="gg-avatar" style="background:linear-gradient(140deg,#69a8ff,#4be1b0);" aria-hidden="true">半</span>
+          <div>
+            <div class="gg-author-name">半盏瓜灯</div>
+            <div class="gg-author-field">知识科普 / 数据可视化</div>
+          </div>
+        </div>
+        <p>城市规划专业出身，做视频之前先做表格。习惯把复杂议题拆成可验证的小问题，每条科普都附数据来源与采集时间，方便观众自行核查。</p>
+        <div class="gg-author-nums"><span>作品 <b>52</b></span><span>粉丝 <b>7.6 万</b></span></div>
+        <button class="gg-mini-btn" type="button" data-gg-author="半盏瓜灯">作者信息</button>
+      </article>
+      <article class="gg-author gg-content-item" data-keywords="瓜田守夜人 幕后 创作 经验分享">
+        <div class="gg-author-head">
+          <span class="gg-avatar" style="background:linear-gradient(140deg,#4be1b0,#69a8ff);" aria-hidden="true">守</span>
+          <div>
+            <div class="gg-author-name">瓜田守夜人</div>
+            <div class="gg-author-field">创作幕后 / 拍摄流程</div>
+          </div>
+        </div>
+        <p>十年剧组经验，愿意把踩过的坑全部公开。擅长把复杂流程讲成可执行清单，很多新人把他的视频当作入门手册反复观看。</p>
+        <div class="gg-author-nums"><span>作品 <b>118</b></span><span>粉丝 <b>15.1 万</b></span></div>
+        <button class="gg-mini-btn" type="button" data-gg-author="瓜田守夜人">作者信息</button>
+      </article>
+      <article class="gg-author gg-content-item" data-keywords="审核小助手 实用技巧 正版 规则">
+        <div class="gg-author-head">
+          <span class="gg-avatar" style="background:linear-gradient(140deg,#ffc94d,#4be1b0);" aria-hidden="true">审</span>
+          <div>
+            <div class="gg-author-name">审核小助手</div>
+            <div class="gg-author-field">实用技巧 / 版权讲解</div>
+          </div>
+        </div>
+        <p>平台官方账号，负责把规则讲人话。更新审核口径前会先发预告，收到较多疑问的条款会专门拍一条解释视频，尽量减少误判与返工。</p>
+        <div class="gg-author-nums"><span>作品 <b>41</b></span><span>粉丝 <b>6.2 万</b></span></div>
+        <button class="gg-mini-btn" type="button" data-gg-author="审核小助手">作者信息</button>
+      </article>
+      <article class="gg-author gg-content-item" data-keywords="巷口阿岚 在地文化 生活 手作">
+        <div class="gg-author-head">
+          <span class="gg-avatar" style="background:linear-gradient(140deg,#c86bff,#ff7a9c);" aria-hidden="true">巷</span>
+          <div>
+            <div class="gg-author-name">巷口阿岚</div>
+            <div class="gg-author-field">在地文化 / 手作与日常</div>
+          </div>
+        </div>
+        <p>拍摄家门口的小店和手艺人，镜头里常有猫和晾衣绳。她认为社区影像的意义不在宏大，而在于让邻居们愿意互相打招呼。</p>
+        <div class="gg-author-nums"><span>作品 <b>73</b></span><span>粉丝 <b>8.3 万</b></span></div>
+        <button class="gg-mini-btn" type="button" data-gg-author="巷口阿岚">作者信息</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 用户口碑 ===== -->
+<section class="gg-section" id="ggReviews" aria-labelledby="ggReviewsTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Reviews</span>
+        <h2 id="ggReviewsTitle">用户口碑 <span>· 来自社区的真实声音</span></h2>
+        <p>这些评价来自观看者、投稿者与合作方，内容未经统一修饰，保留各自语气。</p>
+      </div>
+    </div>
+    <div class="gg-grid-2">
+      <div class="gg-review gg-review-quote">
+        <div class="gg-review-top"><span class="gg-review-user">@深巷听雨</span><span class="gg-stars">★★★★★</span></div>
+        <p>“我是被朋友安利来的，本来只想看一条，结果连着刷了两个小时。最喜欢的是它不急着给结论，很多片子留白很多，看完会自己想事情。”</p>
+        <time>2026-11-19</time>
+      </div>
+      <div class="gg-review">
+        <div class="gg-review-top"><span class="gg-review-user">@南站骑手小周</span><span class="gg-stars">★★★★☆</span></div>
+        <p>“跑单休息的时候看，视频加载挺快，字幕也能自己调大。唯一建议是合集列表能再明显一点，有时候找不到下一集。”</p>
+        <time>2026-11-17</time>
+      </div>
+      <div class="gg-review">
+        <div class="gg-review-top"><span class="gg-review-user">@林间观测员</span><span class="gg-stars">★★★★★</span></div>
+        <p>“作为被拍摄对象参与过一次，拍摄前沟通得很细，成片也提前给我看了，有我不希望出现的画面，提出来后很快调整。这一点很难得。”</p>
+        <time>2026-11-15</time>
+      </div>
+      <div class="gg-review">
+        <div class="gg-review-top"><span class="gg-review-user">@阿岚的邻居们</span><span class="gg-stars">★★★★★</span></div>
+        <p>“我们整条街都在追阿岚的片子，看到自己家阳台出现在镜头里特别开心。希望多拍拍早市，早上六点半的豆浆摊真的很值得记录。”</p>
+        <time>2026-11-13</time>
+      </div>
+      <div class="gg-review">
+        <div class="gg-review-top"><span class="gg-review-user">@新人剪辑阿澈</span><span class="gg-stars">★★★★☆</span></div>
+        <p>“教程内容实用，不是空讲理论。跟着做完第一支 60 秒短片的时候挺有成就感，投稿后还收到审核的逐条建议，比想象中详细。”</p>
+        <time>2026-11-11</time>
+      </div>
+      <div class="gg-review gg-review-quote">
+        <div class="gg-review-top"><span class="gg-review-user">@城市文化馆合作方</span><span class="gg-stars">★★★★★</span></div>
+        <p>“合作项目里他们给的建议很专业，既尊重我们的展陈逻辑，也照顾到普通观众的观看习惯。整个流程清楚，交付准时。”</p>
+        <time>2026-11-08</time>
+      </div>
+      <div class="gg-review">
+        <div class="gg-review-top"><span class="gg-review-user">@夜班护士小满</span><span class="gg-stars">★★★★★</span></div>
+        <p>“下夜班回家最喜欢看治愈系那几个合集，声音干净，没有夸张的特效。有时候看着看着就睡着了，也算是另一种陪伴吧。”</p>
+        <time>2026-11-06</time>
+      </div>
+      <div class="gg-review">
+        <div class="gg-review-top"><span class="gg-review-user">@高校纪录片社团</span><span class="gg-stars">★★★★☆</span></div>
+        <p>“社团把平台的素材共创挑战当成练习项目，几个人分工合拍，反馈很快。要是能增加校园题材的专项奖就更好了。”</p>
+        <time>2026-11-03</time>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 辅助区：合作 + FAQ + 投稿 ===== -->
+<section class="gg-section" id="ggFaq" aria-labelledby="ggFaqTitle">
+  <div class="gg-wrap">
+    <div class="gg-sec-head">
+      <div>
+        <span class="gg-sec-kicker">Support</span>
+        <h2 id="ggFaqTitle">帮助中心 <span>· 合作、常见问题与投稿</span></h2>
+        <p>如果你对上传、授权、下载或报名流程有疑问，可以先在这里找答案；仍有问题可随时提交反馈。</p>
+      </div>
+    </div>
+
+    <div class="gg-grid-2" style="align-items:start;">
+      <div>
+        <h3 style="font-size:16px;font-weight:800;margin-bottom:14px;">合作品牌与伙伴</h3>
+        <div class="gg-partner-grid">
+          <div class="gg-partner"><span class="gg-partner-mark" aria-hidden="true">文</span>城市文化馆<small>在地文化共建</small></div>
+          <div class="gg-partner"><span class="gg-partner-mark" aria-hidden="true">影</span>光影器材社<small>设备与技术支持</small></div>
+          <div class="gg-partner"><span class="gg-partner-mark" aria-hidden="true">声</span>回声录音棚<small>现场收音服务</small></div>
+          <div class="gg-partner"><span class="gg-partner-mark" aria-hidden="true">校</span>高校纪录片社团<small>青年创作者计划</small></div>
+        </div>
+
+        <h3 style="font-size:16px;font-weight:800;margin:26px 0 14px;">常见问题</h3>
+        <div class="gg-faq">
+          <details open>
+            <summary>如何向黑料瓜瓜网站不打烊投稿？</summary>
+            <div class="gg-faq-body">在任意页面点击“投稿入驻”，填写作品简介、素材来源与授权说明；重点内容建议附上 30 秒以内的样片。审核团队会在工作日 24 小时内给出反馈，必要时附修改建议。</div>
+          </details>
+          <details>
+            <summary>什么样的素材属于正版授权范围？</summary>
+            <div class="gg-faq-body">自有拍摄素材、获得书面许可的第三方素材，以及平台提供的官方素材包。若使用音乐、字体、影像片段，需要在提交时注明来源与授权方式，缺少说明的内容会进入人工复核。</div>
+          </details>
+          <details>
+            <summary>被拍摄者可以要求删除出镜画面吗？</summary>
+            <div class="gg-faq-body">可以。请通过反馈入口提交请求并说明具体内容与时间点，平台核实后会尽快下架或重新剪辑。若涉及隐私场景，平台会优先处理，并保留处理记录。</div>
+          </details>
+          <details>
+            <summary>视频可以下载离线观看吗？</summary>
+            <div class="gg-faq-body">标注“官方下载”的内容支持高画质离线缓存；部分合作版权内容仅提供在线播放。下载的文件仅限个人观看，不得二次分发或商业使用。</div>
+          </details>
+          <details>
+            <summary>如何参加素材共创挑战？</summary>
+            <div class="gg-faq-body">在专题页领取当期素材包后，于截止时间前上传成片，并在简介中标注使用的素材编号。平台按叙事完整度、音画匹配度与原创剪辑思路三项评分。</div>
+          </details>
+          <details>
+            <summary>平台如何处理违规或侵权内容？</summary>
+            <div class="gg-faq-body">接到有效举报后，内容会先进入隐藏复核状态，核实为违规或侵权的将下架并通知作者；多次违规的账号会限制上传权限。作者可在结果通知中提交申诉材料。</div>
+          </details>
+          <details>
+            <summary>企业或机构可以合作定制内容吗？</summary>
+            <div class="gg-faq-body">可以。我们提供在地纪录、人物访谈与品牌故事三类合作方向，合作内容会明确标注为品牌合作，并同样遵守内容审核标准，不影响社区的真实评价。</div>
+          </details>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size:16px;font-weight:800;margin-bottom:14px;">创作灵感与更新日志</h3>
+        <div class="gg-topic" style="margin-bottom:14px;">
+          <div class="gg-meta"><span class="gg-chip gg-chip-mint">灵感工具</span><span>本周更新</span></div>
+          <h3 style="font-size:15px;">三个可立即上手的选题方向</h3>
+          <ul>
+            <li>记录你所在街区最早开门的一家店，只拍开门前的十分钟。</li>
+            <li>找一位夜班工作者，用环境音完成一条 3 分钟无解说短片。</li>
+            <li>拍一件家里用了十年以上的旧物，让物讲述使用痕迹。</li>
+          </ul>
+        </div>
+        <div class="gg-topic">
+          <div class="gg-meta"><span class="gg-chip gg-chip-gold">更新日志</span><span>v4.6</span></div>
+          <h3 style="font-size:15px;">本周功能与内容更新</h3>
+          <ul>
+            <li>新增合集连播开关，记住上次播放进度。</li>
+            <li>投稿表单支持分步保存，减少重复填写。</li>
+            <li>专题页新增“报名与上传”双入口。</li>
+            <li>修复部分机型字幕位置偏移问题。</li>
+          </ul>
+        </div>
+        <div class="gg-cta" style="margin-top:16px;flex-direction:column;align-items:flex-start;">
+          <div>
+            <h3 style="font-size:17px;">有故事，就来投稿</h3>
+            <p>支持高清上传、正版授权声明与一对一审核反馈。原创内容优先推荐，入选专题可获得制作支持与首页展示。</p>
+          </div>
+          <div class="gg-actions-row">
+            <button class="gg-btn gg-btn-gold" type="button" data-gg-open="submit">立即投稿</button>
+            <button class="gg-btn gg-btn-ghost" type="button" data-gg-open="report">提交反馈</button>
+            <button class="gg-btn gg-btn-ghost" type="button" data-gg-open="share">分享本站</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="gg-footer">
+  <div class="gg-wrap">
+    <div class="gg-footer-grid">
+      <div>
+        <div class="gg-footer-brand">
+          <span class="gg-logo-mark" aria-hidden="true">瓜</span>
+          <span class="gg-logo-text">黑料瓜瓜网站不打烊</span>
+        </div>
+        <p>黑料瓜瓜网站不打烊官方网站 · 专注真实影像与社区共创的视频品牌平台。我们坚持原创、正版与高清，让每一次现场记录都值得回看。</p>
+        <p style="margin-top:10px;color:#7c8aa6;">持续运营中 · 内容生态共建计划长期开放</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#ggFocus">焦点推荐</a></li>
+          <li><a href="#ggRank">数据榜单</a></li>
+          <li><a href="#ggTopic">专题企划</a></li>
+          <li><a href="#ggStory">品牌故事</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区服务</h4>
+        <ul>
+          <li><a href="#ggAuthors">创作者矩阵</a></li>
+          <li><a href="#ggReviews">用户口碑</a></li>
+          <li><a href="#ggFaq">帮助中心</a></li>
+          <li><a href="#ggNotice">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>合作咨询：hezuo@ggbb.example</li>
+          <li>投稿支持：tougao@ggbb.example</li>
+          <li>反馈与举报：通过页面反馈入口提交</li>
+          <li>工作时间：周一至周日 10:00–22:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gg-footer-bottom">
+      <span>© 2026 黑料瓜瓜网站不打烊 官方网站 版权所有</span>
+      <span>备案号：京ICP备2026000000号-1</span>
+      <span>持续运营 · 用户至上 · 值得信赖</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 弹窗与提示 ===== -->
+<div class="gg-toast" id="ggToast" role="status" aria-live="polite"></div>
+
+<div class="gg-modal" id="ggModal" role="dialog" aria-modal="true" aria-labelledby="ggModalTitle">
+  <div class="gg-modal-card">
+    <button class="gg-modal-close" type="button" id="ggModalClose" aria-label="关闭弹窗">×</button>
+    <h3 id="ggModalTitle">提示</h3>
+    <div id="ggModalBody"></div>
+  </div>
+</div>
+
+<button class="gg-float-top" id="ggFloatTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('ggToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('gg-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('gg-show');
+    }, 2100);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('ggBurger');
+  var mobileNav = document.getElementById('ggMobileNav');
+  if (burger && mobileNav){
+    burger.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('gg-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.textContent = open ? '×' : '☰';
+    });
+    mobileNav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A'){
+        mobileNav.classList.remove('gg-open');
+        burger.setAttribute('aria-expanded','false');
+        burger.textContent = '☰';
+      }
+    });
+  }
+
+  /* ---------- 搜索前端反馈 ---------- */
+  var searchForm = document.getElementById('ggSearchForm');
+  var searchInput = document.getElementById('ggSearchInput');
+  var feedback = document.getElementById('ggSearchFeedback');
+  var items = Array.prototype.slice.call(document.querySelectorAll('.gg-content-item'));
+
+  function runSearch(){
+    var q = (searchInput.value || '').trim().toLowerCase();
+    if (!q){
+      items.forEach(function(el){ el.style.display = ''; });
+      feedback.textContent = '';
+      feedback.className = 'gg-search-feedback';
+      return;
+    }
+    var hit = 0;
+    items.forEach(function(el){
+      var text = (el.textContent + ' ' + (el.getAttribute('data-keywords') || '')).toLowerCase();
+      var match = text.indexOf(q) !== -1;
+      el.style.display = match ? '' : 'none';
+      if (match) hit++;
+    });
+    if (hit > 0){
+      feedback.textContent = '找到 ' + hit + ' 条与「' + q + '」相关的内容，已为你筛选显示。';
+      feedback.className = 'gg-search-feedback gg-ok';
+    } else {
+      feedback.textContent = '暂时没有匹配「' + q + '」的内容，试试“城市”“访谈”“教程”或“幕后”。';
+      feedback.className = 'gg-search-feedback gg-warn';
+    }
+  }
+  if (searchInput){
+    searchInput.addEventListener('input', runSearch);
+  }
+  if (searchForm){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      runSearch();
+      toast(searchInput.value.trim() ? '已按关键词筛选内容' : '请输入关键词后再搜索');
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-gg-like]');
+    if (likeBtn){
+      var numEl = likeBtn.querySelector('.gg-like-num');
+      var base = parseInt(likeBtn.getAttribute('data-gg-count'), 10) || 0;
+      var liked = likeBtn.classList.toggle('gg-on-gold');
+      var now = liked ? base + 1 : base;
+      if (numEl) numEl.textContent = now;
+      toast(liked ? '已点赞，感谢支持' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('[data-gg-fav]');
+    if (favBtn){
+      var on = favBtn.classList.toggle('gg-on-pink');
+      favBtn.textContent = on ? '已收藏' : '收藏';
+      toast(on ? '已加入你的收藏夹' : '已取消收藏');
+      return;
+    }
+    var shareBtn = e.target.closest('[data-gg-share]');
+    if (shareBtn){
+      openModal('share');
+      return;
+    }
+  });
+
+  /* ---------- 榜单切换 ---------- */
+  var rankData = {
+    hot: [
+      ['凌晨三点的声音采样：18 个不打烊瞬间','城市探索 · 夜航瓜皮 · 互动 4,218','热度 98.6'],
+      ['母亲的第一条自拍视频','情感故事 · 瓜皮放映员 · 互动 5,230','热度 96.2'],
+      ['菜市场第六排：一座城的味觉档案','在地文化 · 半盏瓜灯 · 互动 3,870','热度 94.1'],
+      ['雨天森林 24 小时，只留环境音','治愈影像 · 夜航瓜皮 · 互动 3,105','热度 91.8'],
+      ['一条合规素材的上线全路径','实用技巧 · 审核小助手 · 互动 980','热度 88.4'],
+      ['一条短片背后的 37 次重拍','创作幕后 · 瓜田守夜人 · 互动 1,860','热度 86.9']
+    ],
+    new: [
+      ['第一次拍长镜头，我把三脚架忘在公交上','新人记录 · 阿澈 · 互动 412','新秀 95.2'],
+      ['楼下面包店凌晨四点的第一炉','生活记录 · 小满 · 互动 356','新秀 93.7'],
+      ['用手机拍完一条街头访谈','实用技巧 · 阿岚 · 互动 289','新秀 91.4'],
+      ['我家猫阻止我剪片的第 20 天','萌宠日常 · 巷口阿岚 · 互动 508','新秀 90.1'],
+      ['校园操场的声音地图','知识科普 · 高校社团 · 互动 176','新秀 87.6'],
+      ['给奶奶录一段方言口述','情感故事 · 阿澈 · 互动 233','新秀 85.9']
+    ],
+    word: [
+      ['母亲的第一条自拍视频','情感故事 · 好评率 99%','口碑 9.9'],
+      ['被拍摄者的删除请求处理记录','企业公开 · 好评率 98%','口碑 9.8'],
+      ['雨天森林 24 小时，只留环境音','治愈影像 · 好评率 98%','口碑 9.8'],
+      ['一条合规素材的上线全路径','实用技巧 · 好评率 97%','口碑 9.6'],
+      ['城市背后的声音 第 12 期','城市探索 · 好评率 96%','口碑 9.5'],
+      ['不打烊夜谈：剪辑台的取舍','人物访谈 · 好评率 96%','口碑 9.4']
+    ]
+  };
+
+  var rankPanel = document.querySelector('.gg-rank-panel');
+  document.addEventListener('click', function(e){
+    var tab = e.target.closest('[data-gg-rank]');
+    if (!tab || !rankPanel) return;
+    document.querySelectorAll('.gg-rank-tab').forEach(function(t){
+      t.classList.remove('gg-active');
+      t.setAttribute('aria-selected','false');
+    });
+    tab.classList.add('gg-active');
+    tab.setAttribute('aria-selected','true');
+    var key = tab.getAttribute('data-gg-rank');
+    var rows = rankData[key] || [];
+    rankPanel.innerHTML = rows.map(function(r, i){
+      return '<div class="gg-rank-row"><span class="gg-rank-no">' + (i+1) + '</span>' +
+        '<div><div class="gg-rank-title">' + r[0] + '</div>' +
+        '<div class="gg-rank-sub">' + r[1] + '</div></div>' +
+        '<span class="gg-rank-val">' + r[2] + '</span></div>';
+    }).join('');
+    toast('已切换到' + tab.textContent);
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var modal = document.getElementById('ggModal');
+  var modalTitle = document.getElementById('ggModalTitle');
+  var modalBody = document.getElementById('ggModalBody');
+
+  function openModal(type, extra){
+    var title = '提示';
+    var html = '';
+    if (type === 'share'){
+      title = '分享黑料瓜瓜网站不打烊';
+      html = '<p>把喜欢的内容分享给朋友，一起看真实影像。</p>' +
+        '<div class="gg-share-row">' +
+        '<button class="gg-share-chip" type="button" data-gg-copy>复制链接</button>' +
+        '<button class="gg-share-chip" type="button" data-gg-share-tip="微信">微信</button>' +
+        '<button class="gg-share-chip" type="button" data-gg-share-tip="微博">微博</button>' +
+        '<button class="gg-share-chip" type="button" data-gg-share-tip="QQ">QQ</button>' +
+        '</div>';
+    } else if (type === 'submit'){
+      title = '投稿入驻';
+      html = '<p>填写作品基本信息，审核团队会在工作日 24 小时内反馈。请确认素材来源与授权情况。</p>' +
+        '<input type="text" id="ggSubmitTitle" placeholder="作品标题，例如：凌晨三点的便利店">' +
+        '<input type="text" id="ggSubmitContact" placeholder="联系邮箱，便于接收审核结果">' +
+        '<textarea id="ggSubmitDesc" placeholder="作品简介：拍摄时间、地点、素材来源与授权说明"></textarea>' +
+        '<div class="gg-actions-row"><button class="gg-btn gg-btn-gold" type="button" data-gg-submit-send>提交投稿</button></div>';
+    } else if (type === 'report'){
+      title = '反馈与举报';
+      html = '<p>如果你发现侵权、违规或隐私问题，请尽量描述具体内容与时间点，方便我们快速核实。</p>' +
+        '<input type="text" id="ggReportTarget" placeholder="涉及的内容标题或作者">' +
+        '<textarea id="ggReportDesc" placeholder="问题描述：发生了什么、出现在哪一段"></textarea>' +
+        '<div class="gg-actions-row"><button class="gg-btn gg-btn-gold" type="button" data-gg-report-send>提交反馈</button></div>';
+    } else if (type === 'guide'){
+      title = '创作者攻略';
+      html = '<p>三步开始你的第一条作品：</p>' +
+        '<ul style="list-style:none;padding:0;margin:0 0 12px;">' +
+        '<li style="padding:8px 0;border-bottom:1px dashed #2c3852;"><b>1. 选题：</b>从你熟悉的一条街、一个人、一件旧物开始。</li>' +
+        '<li style="padding:8px 0;border-bottom:1px dashed #2c3852;"><b>2. 拍摄：</b>保留环境音，提前沟通出镜许可，别怕重拍。</li>' +
+        '<li style="padding:8px 0;"><b>3. 上传：</b>标注素材来源与授权，写清拍摄时间地点，等待审核反馈。</li>' +
+        '</ul>' +
+        '<p>平台提供素材包下载、剪辑思路模板与一对一审核建议，欢迎从“素材共创挑战”开始练手。</p>';
+    } else if (type === 'author'){
+      title = extra + ' · 作者档案';
+      html = '<p>' + extra + ' 是黑料瓜瓜网站不打烊的长期驻站创作者，作品以真实记录为核心，注重与被拍摄者的沟通和授权。其内容多次入选首页焦点与专题企划。</p>' +
+        '<p>你可以在创作者矩阵中查看作品列表，也可以在评论区留言交流拍摄经验。合作与采访邀约请通过合作咨询邮箱联系。</p>';
+    } else {
+      html = '<p>这是一个提示。</p>';
+    }
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('gg-open');
+  }
+
+  function closeModal(){
+    modal.classList.remove('gg-open');
+  }
+
+  document.addEventListener('click', function(e){
+    var opener = e.target.closest('[data-gg-open]');
+    if (opener){
+      openModal(opener.getAttribute('data-gg-open'));
+      return;
+    }
+    var authorBtn = e.target.closest('[data-gg-author]');
+    if (authorBtn){
+      openModal('author', authorBtn.getAttribute('data-gg-author'));
+      return;
+    }
+    if (e.target.closest('#ggModalClose') || e.target === modal){
+      closeModal();
+      return;
+    }
+    if (e.target.closest('[data-gg-copy]')){
+      var link = window.location.href.split('#')[0];
+      if (navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          toast('链接已复制到剪贴板');
+        }).catch(function(){
+          toast('复制失败，请手动复制地址栏链接');
+        });
+      } else {
+        toast('当前环境不支持自动复制，请手动复制地址栏链接');
+      }
+      return;
+    }
+    var shareTip = e.target.closest('[data-gg-share-tip]');
+    if (shareTip){
+      toast('已生成' + shareTip.getAttribute('data-gg-share-tip') + '分享内容');
+      return;
+    }
+    if (e.target.closest('[data-gg-submit-send]')){
+      var t = document.getElementById('ggSubmitTitle');
+      var c = document.getElementById('ggSubmitContact');
+      if (!t || !t.value.trim() || !c || !c.value.trim()){
+        toast('请填写作品标题与联系邮箱');
+        return;
+      }
+      closeModal();
+      toast('投稿已提交，审核团队将在 24 小时内反馈');
+      return;
+    }
+    if (e.target.closest('[data-gg-report-send]')){
+      var rd = document.getElementById('ggReportDesc');
+      if (!rd || !rd.value.trim()){
+        toast('请填写问题描述');
+        return;
+      }
+      closeModal();
+      toast('反馈已收到，我们会尽快核实处理');
+      return;
+    }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.classList.contains('gg-open')){
+      closeModal();
+    }
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var floatTop = document.getElementById('ggFloatTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 620){
+      floatTop.classList.add('gg-show');
+    } else {
+      floatTop.classList.remove('gg-show');
+    }
+  }, {passive:true});
+  floatTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = document.querySelectorAll('[data-gg-count]');
+  function animateCounter(el){
+    if (el.getAttribute('data-gg-done') === '1') return;
+    el.setAttribute('data-gg-done','1');
+    var target = parseInt(el.getAttribute('data-gg-count'), 10) || 0;
+    var suffix = el.getAttribute('data-gg-suffix') || '';
+    var start = 0;
+    var dur = 1100;
+    var t0 = null;
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(start + (target - start) * eased);
+      el.textContent = val.toLocaleString('zh-CN') + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          animateCounter(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:.4});
+    counters.forEach(function(c){ io.observe(c); });
+  } else {
+    counters.forEach(animateCounter);
+  }
+
+  /* ---------- 锚点平滑滚动（预留吸顶高度） ---------- */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href');
+    if (id === '#' || id.length < 2) return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.scrollY - 104;
+    window.scrollTo({top: Math.max(top, 0), behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
